@@ -768,20 +768,6 @@ header li {
   fill: var(--accent-color);
 }
 
-.modal-input:not(:placeholder-shown) {
-  border-color: var(--accent-color);
-}
-
-.modal-input:hover,
-.modal-input:focus {
-  border-color: var(--accent-color);
-}
-
-.modal-input:hover + .form-icon,
-.modal-input:focus + .form-icon {
-  fill: var(--accent-color);
-}
-
 .modal-title {
   display: inline-block;
   text-align: center;
@@ -809,13 +795,30 @@ header li {
 .modal-input {
   width: 448px;
   height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: #fff;
   padding-left: 42px;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
+
+.modal-input:hover,
+.modal-input:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-input:hover + .form-icon,
+.modal-input:focus + .form-icon {
+  fill: var(--accent-color);
+}
+
+.modal-input:placeholder-shown {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.modal-input:not(:placeholder-shown) {
+  border-color: var(--accent-color);
+} 
 
 .input-icon {
   position: relative;
