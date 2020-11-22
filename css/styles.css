@@ -760,6 +760,10 @@ header li {
   background-color: #fff;
 }
 
+.modal-button:focus {
+  fill: var(--accent-color);
+}
+
 .close-button:hover {
   fill: var(--accent-color);
 }
@@ -773,7 +777,8 @@ header li {
   border-color: var(--accent-color);
 }
 
-.input-icon:hover .form-icon {
+.modal-input:hover + .form-icon,
+.modal-input:focus + .form-icon {
   fill: var(--accent-color);
 }
 
