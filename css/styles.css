@@ -799,7 +799,13 @@ header li {
   background-color: #fff;
   padding-left: 42px;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.modal-input:not(:placeholder-shown) {
+  border-color: var(--accent-color);
 }
 
 .modal-input:hover,
@@ -811,14 +817,6 @@ header li {
 .modal-input:focus + .form-icon {
   fill: var(--accent-color);
 }
-
-.modal-input:placeholder-shown {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-.modal-input:not(:placeholder-shown) {
-  border-color: var(--accent-color);
-} 
 
 .input-icon {
   position: relative;
@@ -865,7 +863,14 @@ textarea:focus {
 }
 
 .checkbox {
-  appearance: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 .checkbox-item {
